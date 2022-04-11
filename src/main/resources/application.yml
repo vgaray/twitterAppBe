@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://zemoga-test-db.crhpedy9xxto.us-east-1.rds.amazonaws.com:3306/zemoga_test_db
+    username: zemoga_test_db
+    password: Zem0ga.101
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 2
+  application:
+    name: twitter.demo
+  jpa:
+    hibernate:
+      ddl-auto: none
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+server:
+  port: 8090
+  compression:
+    enabled: true
+    min-response-size: 2048
+    mime-types: application/json,application/xml,application/javascript,text/html,text/xml,text/plain,text/css
+
+com.twitter.demo:
+  oauth:
+    consumer-key: KRy7l0v8wex3w8Sy5zThai3Ea
+    consumer-secret: X2eBm0Y21kYEuR74W3Frqc2JVIizOj8Q1EVGatDsEVVEJo0ucu
+    consumer-access-token: 1220032047516921859-otvXjhExyUTZ5GLxssc9h5ORqtPZja
+    consumer-access-token-secret: tmJKqM4ORfQW6CH7wIVV8uKNpmSEmeFAP8lYwGb19uYjj
