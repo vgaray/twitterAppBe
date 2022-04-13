@@ -14,8 +14,6 @@ public class TwitterConnectionApiImpl implements TwitterConnectionService {
     private final TwitterConnectionApi twitterConnectionApi;
     @Value("${com.twitter.demo.twitter.token}")
     private String twitterToken;
-    @Value("${com.twitter.demo.twitter.cookie}")
-    private String cookie;
 
     public TwitterConnectionApiImpl(TwitterConnectionApi twitterConnectionApi) {
         this.twitterConnectionApi = twitterConnectionApi;
@@ -24,7 +22,7 @@ public class TwitterConnectionApiImpl implements TwitterConnectionService {
 
     @Override
     public TwitterData getTimeLineByTwitterId(String id) throws IOException {
-        return twitterConnectionApi.getTimeLineByTwitterId(id, twitterToken, cookie)
+        return twitterConnectionApi.getTimeLineByTwitterId(id, twitterToken)
                 .execute()
                 .body();
     }

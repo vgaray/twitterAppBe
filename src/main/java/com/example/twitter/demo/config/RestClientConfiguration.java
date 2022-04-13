@@ -24,6 +24,8 @@ public class RestClientConfiguration {
     private static final Logger LOG = LoggerFactory.getLogger(RestClientConfiguration.class);
     @Value("${com.twitter.demo.twitter.base-url}")
     private String urlTwitterPublic;
+    @Value("${com.twitter.demo.twitter.token}")
+    private String twitterToken;
 
     private Retrofit retrofitApiGatewayTwitter;
 
@@ -40,7 +42,7 @@ public class RestClientConfiguration {
     }
 
     private Retrofit retroFitConfiguration(String url) {
-        LOG.info("Cargando configuracion para conexion a twitter ");
+        LOG.info("Cargando configuracion para conexion a twitter...");
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
