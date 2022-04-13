@@ -7,6 +7,8 @@ import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 import twitter4j.TwitterException;
 
+import java.io.IOException;
+
 @RestController
 @RequestMapping("/demo/")
 @CrossOrigin("*")
@@ -24,6 +26,11 @@ public class DemoBoundary {
     @GetMapping("/twitter-time-line")
     public Object getDemoTwitterTimeLine(@RequestParam String twitterUserId, @Nullable @RequestParam Integer limit) throws TwitterException {
         return portfolioController.getPortfolioByTwitterUserId(twitterUserId);
+    }
+
+    @GetMapping("/twitter-time-line/user")
+    public Object getDemoTwitterTimeLineByUser(@RequestParam String twitterUserId) throws IOException {
+        return portfolioController.getTwitterTimeLine(twitterUserId);
     }
 
 }

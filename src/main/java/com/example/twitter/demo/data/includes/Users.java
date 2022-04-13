@@ -6,6 +6,6 @@ import lombok.Data;
 public class Users {
     private String id;
     private String name;
-    private String created_at;
     private String username;
+    private String created_at;
 }

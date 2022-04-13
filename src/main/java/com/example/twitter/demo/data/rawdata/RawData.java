@@ -6,7 +6,7 @@ import lombok.Data;
 public class RawData {
     private String created_at;
     private String text;
-    private PublicMetrics publicMetrics;
+    private PublicMetrics public_metrics;
     private String author_id;
     private String id;
 }

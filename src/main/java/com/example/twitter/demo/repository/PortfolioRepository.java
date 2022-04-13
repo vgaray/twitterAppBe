@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PortfolioRepository extends CrudRepository<Portfolio, Integer> {
-    Portfolio findAllByTwitterUserId(String twitterUserId);
+    Portfolio findByTwitterUserId(String twitterUserId);
 }

@@ -28,3 +28,7 @@ com.twitter.demo:
     consumer-secret: X2eBm0Y21kYEuR74W3Frqc2JVIizOj8Q1EVGatDsEVVEJo0ucu
     consumer-access-token: 1220032047516921859-otvXjhExyUTZ5GLxssc9h5ORqtPZja
     consumer-access-token-secret: tmJKqM4ORfQW6CH7wIVV8uKNpmSEmeFAP8lYwGb19uYjj
+  twitter:
+    base-url: https://api.twitter.com/2/
+    token: Bearer AAAAAAAAAAAAAAAAAAAAAMtobQEAAAAAGlK%2FhX%2F65%2BScpdVpMi%2Bp%2B1QmwAw%3DejmcVihNsXAUT1QPpSrLvx0XTpxcKOmXeeWaycYzm4JoJKTbVq
+    cookie: guest_id=v1%3A164960907519069557; guest_id_ads=v1%3A164960907519069557; guest_id_marketing=v1%3A164960907519069557; personalization_id="v1_+ARqOBmt7tzJLeXcYw/cGQ=="

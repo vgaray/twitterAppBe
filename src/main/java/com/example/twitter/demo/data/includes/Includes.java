@@ -6,5 +6,5 @@ import java.util.List;
 
 @Data
 public class Includes {
-    private List<Users> usersList;
+    private List<Users> users;
 }
