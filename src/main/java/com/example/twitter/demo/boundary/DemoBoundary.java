@@ -1,12 +1,11 @@
 package com.example.twitter.demo.boundary;
 
-import com.example.twitter.demo.controller.PortfolioController;
-import com.example.twitter.demo.service.TwitterService;
+import com.example.twitter.demo.entity.controller.PortfolioController;
+import com.example.twitter.demo.entity.Portfolio;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
-import twitter4j.TwitterException;
 
+import javax.validation.Valid;
 import java.io.IOException;
 
 @RestController
@@ -15,22 +14,20 @@ import java.io.IOException;
 @Slf4j
 public class DemoBoundary {
 
-    private final TwitterService twitterService;
     private final PortfolioController portfolioController;
 
-    public DemoBoundary(TwitterService twitterService, PortfolioController portfolioController) {
-        this.twitterService = twitterService;
+    public DemoBoundary(PortfolioController portfolioController) {
         this.portfolioController = portfolioController;
     }
 
-    @GetMapping("/twitter-time-line")
-    public Object getDemoTwitterTimeLine(@RequestParam String twitterUserId, @Nullable @RequestParam Integer limit) throws TwitterException {
-        return portfolioController.getPortfolioByTwitterUserId(twitterUserId);
+    @GetMapping("/portfolio/twitter-time-line/user")
+    public Object getDemoTwitterTimeLineByUser(@RequestParam String twitterUserId) throws IOException {
+        return portfolioController.getTwitterTimeLineByUserId(twitterUserId);
     }
 
-    @GetMapping("/twitter-time-line/user")
-    public Object getDemoTwitterTimeLineByUser(@RequestParam String twitterUserId) throws IOException {
-        return portfolioController.getTwitterTimeLine(twitterUserId);
+    @PostMapping("/portfolio/save")
+    public Object saveUpdatePortfolio(@Valid @RequestBody Portfolio portfolio) {
+        return portfolioController.savePortfolio(portfolio);
     }
 
 }

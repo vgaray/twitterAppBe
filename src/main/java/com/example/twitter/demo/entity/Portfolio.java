@@ -1,9 +1,10 @@
 package com.example.twitter.demo.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
@@ -12,8 +13,7 @@ public class Portfolio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idportfolio")
-    @JsonIgnore
-    private Integer idportfolio;
+    private Integer idPortfolio;
 
     @Column(name = "description")
     private String description;
@@ -51,6 +51,8 @@ public class Portfolio {
     @Column(name="phone")
     private String phone;
 
+    @NotNull(message = "el campo twitterUserId no puede ser nulo")
+    @NotEmpty(message = "el campo twitterUserId no puede ser vacío")
     @Column(name = "twitter_user_id")
     private String twitterUserId;
 

@@ -1,10 +1,7 @@
 package com.example.twitter.demo.config;
 
 import com.example.twitter.demo.proxy.twitter.TwitterConnectionApi;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +12,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
-import java.io.IOException;
 import java.util.Objects;
 
 @EnableScheduling
