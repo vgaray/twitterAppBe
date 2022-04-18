@@ -2,7 +2,7 @@
 backend side
 
 software prerequisites: widows 10 , install JAVA_HOME variables, jdk 1.8+
-steps to build the app: mvn clean install
+steps to build the app: mvn clean install , git checkout master (use master branch), finally deploy app
 technologies used: java 1.8, JPA buddy,Lombock,Retrofit 2.0
 total time(in hours): 4-6hrs
 
